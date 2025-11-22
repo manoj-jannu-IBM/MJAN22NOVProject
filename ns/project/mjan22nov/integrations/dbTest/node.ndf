@@ -46,68 +46,26 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">manoj.jannu@ibm.com</value>
-    <value name="lastModifiedDate">1763805302520</value>
+    <value name="lastModifiedDate">1763805947247</value>
     <value name="displayName">dbTest</value>
     <value name="description"></value>
-    <array name="appList" type="record" depth="1">
-      <record javaclass="com.wm.util.Values">
-        <value name="providerName">WmJDBCAdapter</value>
-        <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
-      </record>
-    </array>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
       <record name="/0" javaclass="com.wm.util.Values">
-        <value name="itemType">APPS</value>
-        <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
-        <value name="name">Database</value>
-        <value name="providerName">WmJDBCAdapter</value>
-        <record name="operation" javaclass="com.wm.util.Values">
-          <value name="operationName">oracletest</value>
-          <value name="isCustom">true</value>
-          <value name="operationType">actions</value>
-          <value name="connectionType">sagcloud</value>
-          <value name="projectName">project.mjan22nov</value>
+        <null name="name"/>
+        <value name="itemType">PACKAGES</value>
+        <record name="serviceInfo" javaclass="com.wm.util.Values">
+          <value name="groupDisplayName">SIQAJDBCAdapterTests</value>
+          <value name="groupName">SIQAJDBCAdapterTests;1.0</value>
+          <null name="services"/>
         </record>
-        <value name="appType">predefined</value>
-        <Boolean name="hasAccount">true</Boolean>
-        <Boolean name="allowCustomOperations">true</Boolean>
-        <value name="allowDeleteApplication">false</value>
-        <value name="allowUpdateApplication">false</value>
-        <null name="certified"/>
-        <Boolean name="deprecated">false</Boolean>
-        <value name="description">Database Application enables you to perform database operation</value>
-        <null name="icon"/>
-        <value name="packageName">WmJDBCAdapter</value>
-        <value name="type">Adapters</value>
-        <value name="version">1.0</value>
-        <record name="connection" javaclass="com.wm.util.Values">
-          <value name="connectionName">Database_3Oracle</value>
-          <value name="connectionType">sagcloud</value>
-          <null name="description"/>
+        <Boolean name="isProjectPackage">false</Boolean>
+        <record name="serviceName" javaclass="com.wm.util.Values">
+          <value name="description">SIQAJDBCAdapterTests.adapterServices:getData</value>
+          <value name="serviceName">SIQAJDBCAdapterTests.adapterServices:getData</value>
+          <value name="displayName">getData</value>
         </record>
-        <value name="connectionNSName">project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_3Oracle</value>
-        <value name="connectionType">sagcloud</value>
-        <Boolean name="accountReferenceResolved">true</Boolean>
-        <Boolean name="serviceReferenceResolved">true</Boolean>
-        <array name="map" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <array name="mapDelete" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <array name="transformer" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
-        <value name="nodePathForDebug">0</value>
-      </record>
-      <record name="/1" javaclass="com.wm.util.Values">
-        <value name="itemType">ALL</value>
-        <value name="name">NEW</value>
+        <null name="outputMapSet"/>
+        <null name="mapSet"/>
       </record>
     </record>
   </record>

@@ -76,6 +76,22 @@ services:
     version: "1.0"
   - name: WmSalesforceRESTProvider
     version: 10.7.0.0.197
+- serviceName: project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:oracletest
+  packages:
+  - name: MJAN22NOVProject
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
 - serviceName: project.mjan22nov.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:salesforceaccount
   packages:
   - name: MJAN22NOVProject
@@ -109,6 +125,22 @@ services:
   - name: WmSalesforceRESTProvider
     version: 10.7.0.0.197
 - serviceName: project.mjan22nov.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.operations.actions:addData
+  packages:
+  - name: MJAN22NOVProject
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.mjan22nov.integrations:dbTest
   packages:
   - name: MJAN22NOVProject
     version: "1.0"
@@ -202,7 +234,7 @@ configurationVariables:
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
   : tcp
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3Oracle.connectionEnabled
-  : "false"
+  : "true"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionEnabled
   : "false"
   ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.providerUrl

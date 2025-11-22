@@ -20,6 +20,7 @@ packages:
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: WmJDBCAdapter
+  version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
@@ -37,35 +38,67 @@ services:
     version: 10.7.0.0.66
   - name: SIQACloudStreamsTests
     version: "1.0"
+- serviceName: project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_2
+  packages:
+  - name: MJAN22NOVProject
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
 configurationVariables:
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.keyStore
+  : ""
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
+  : MYSQL_DATABASE
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.blockingTimeout
   : "1000"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.startupBackoffSecs
   : "10"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.maximumPoolSize
+  : "10"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.startupRetryCount
   : "0"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionEnabled
-  : "false"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.networkProtocol
   : tcp
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.trustStore
+  : ""
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.user
   : siqatest
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
+  : MySQL
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.minimumPoolSize
+  : "1"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.poolIncrementSize
   : "1"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.keyStore
-  : ""
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.otherProperties
   : loginTimeout=60;driverType=2;
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.driverType
   : MYSQL22Nov
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolIncrementSize
+  : "1"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.poolable
   : "false"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.maximumPoolSize
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
   : "10"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionEnabled
+  : "false"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.transactionType
   : NO_TRANSACTION
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.serverName
-  : 9.46.196.248
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.dbType
   : MySQL
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.password
@@ -76,11 +109,39 @@ configurationVariables:
   : "3306"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.databaseName
   : MYSQL_DATABASE
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
+  : NO_TRANSACTION
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.minimumPoolSize
   : "1"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.datasourceClass
-  : com.mysql.cj.jdbc.MysqlDataSource
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.expireTimeout
   : "1000"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
+  : MYSQL22Nov
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.trustStore
   : ""
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.user
+  : siqatest
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
+  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionEnabled
+  : "false"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
+  : 9.46.196.248
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.keyStore
+  : ""
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=2;
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.serverName
+  : 9.46.196.248
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource

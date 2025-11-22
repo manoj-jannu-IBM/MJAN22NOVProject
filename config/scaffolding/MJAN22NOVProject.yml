@@ -156,6 +156,14 @@ services:
     version: "1.0"
   - name: WmSalesforceRESTProvider
     version: 10.7.0.0.197
+- serviceName: SIQAJDBCAdapterTests.adapterServices:getData
+  packages:
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.readTimeout
   : "30000"

@@ -23,6 +23,9 @@ packages:
   version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
+- name: WmSalesforceRESTProvider
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: supported
 services:
 - serviceName: project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1MysqlTest22Nov
   packages:
@@ -38,6 +41,8 @@ services:
     version: 10.7.0.0.66
   - name: SIQACloudStreamsTests
     version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
 - serviceName: project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_2
   packages:
   - name: MJAN22NOVProject
@@ -52,96 +57,228 @@ services:
     version: 10.7.0.0.66
   - name: SIQACloudStreamsTests
     version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.mjan22nov.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:salesforceaccount
+  packages:
+  - name: MJAN22NOVProject
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.mjan22nov.integrations:SalesforceCRMTest
+  packages:
+  - name: MJAN22NOVProject
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
+- serviceName: project.mjan22nov.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.operations.actions:addData
+  packages:
+  - name: MJAN22NOVProject
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.197
 configurationVariables:
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.keyStore
-  : ""
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
-  : MYSQL_DATABASE
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.readTimeout
+  : "30000"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.validateAfterInactivity
   : "1000"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.startupBackoffSecs
   : "10"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.maximumPoolSize
   : "10"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.startupRetryCount
-  : "0"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.networkProtocol
   : tcp
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cx.grant_type
+  : refresh_token
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupRetryCount
   : "0"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.trustStore
-  : ""
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.user
   : siqatest
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
   : MySQL
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.minimumPoolSize
   : "1"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.poolIncrementSize
-  : "1"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.otherProperties
   : loginTimeout=60;driverType=2;
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.driverType
-  : MYSQL22Nov
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.expireTimeout
   : "1000"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolIncrementSize
   : "1"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.retryCount
+  : "4"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.poolable
   : "false"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
-  : "10"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.blockingTimeout
   : "1000"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolable
   : "false"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionEnabled
   : "false"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.connectionEnabled
+  : "true"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.transactionType
   : NO_TRANSACTION
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.dbType
-  : MySQL
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.authorizationHeaderInTokenRefresh
+  : "false"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.password
   : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.heartBeatInterval
-  : "0"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.portNumber
   : "3306"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.databaseName
-  : MYSQL_DATABASE
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
-  : NO_TRANSACTION
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.minimumPoolSize
   : "1"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.expireTimeout
   : "1000"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
-  : MYSQL22Nov
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.trustStore
-  : ""
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.sockBuffSize
+  : "8192"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.user
   : siqatest
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
-  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth.accessToken
+  : "{AES}2jLybUnV6FemugOpebt+dlahAx6I0TjzI8dhhTaMOzQCUvBC7dlLyfPNnmfageTrOC614aFvWHu8Rs48BSL8LXt0PnRErcK+kxUMwOpGCUAAo05ajPj4xnP0LCgTzTXRenPvWwsZSPHkItx8DXJoo2mK1wuN3U1rA1B0VhuZoUw="
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.poolable
+  : "true"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
   : tcp
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionEnabled
   : "false"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
-  : 9.46.196.248
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.keyStore
-  : ""
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=2;
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.providerUrl
+  : https://softwareag7-dev-ed.my.salesforce.com
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.authorizationServerUrl
+  : https://login.salesforce.com/services/oauth2/authorize
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.maximumPoolSize
   : "10"
-  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
-  : "3306"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.serverName
   : 9.46.196.248
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.datasourceClass
   : com.mysql.cj.jdbc.MysqlDataSource
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.expireTimeout
+  : "1000"
+  ? iscloudstreamsconnectorservice.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:addData.virtualServiceName
+  : WmCloudStreams.RestVS
   ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.datasourceClass
   : com.mysql.cj.jdbc.MysqlDataSource
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.timeoutType
+  : auto
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.keyStore
+  : ""
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth.consumerSecret
+  : "{AES}S+OJUXnsSzS9FVwg4EcXw7U8RmLyuumGImNomFWBgk6T+vxQhwC5PcfjMx2ftZolrF7AUhqV0EP3EGbU847nWGmK1wuN3U1rA1B0VhuZoUw="
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
+  : MYSQL_DATABASE
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.refreshToken
+  : "{AES}3xAVJ1NaykPu9FvMp6eUxV5yoFe6VANPNjUWc2wwPdN3pf9vuB2iXTu/rg9xO+5Zx9A87i/WQpDFDeo1mgADhYgirnio6KdAszm5UWVUB3OX8vz2y9FicF0ee225VYCt"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.trustStore
+  : ""
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.driverType
+  : MYSQL22Nov
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.tcpNoDelay
+  : "false"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.retryIfRequestSentOk
+  : "true"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.authorizationHeaderPrefix
+  : Bearer
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.startupBackoffSecs
+  : "10"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.dbType
+  : MySQL
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.blockTimeout
+  : "1000"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.databaseName
+  : MYSQL_DATABASE
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.enableCompression
+  : "false"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.startupRetryCount
+  : "0"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
+  : MYSQL22Nov
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.trustStore
+  : ""
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth.consumerId
+  : 3MVG9wt4IL4O5wvIADNKl03CbBmCQKcAkAbkFDcpaTXkyVfv7X1O4s2cklJGvkgxFTHWN6GBLsMx_IKubmOL5
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.authenticationServerUrl
+  : https://login.salesforce.com/services/oauth2/token
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
+  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
+  : 9.46.196.248
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.accessTokenRefreshURLRequest
+  : URL Query String
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.socketLinger
+  : "-1"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.poolIncrementSize
+  : "1"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1MysqlTest22Nov.connectionSettings.keyStore
+  : ""
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.maximumPoolSize
+  : "10"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.connectTimeout
+  : "30000"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=2;
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.accessTokenRefreshURL
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.refreshAccessToken
+  : "true"
+  ? artConnection.MJAN22NOVProject.project.mjan22nov.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
+  : "3306"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.keepAliveInterval
+  : "300000"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.oauth_v20.scope
+  : offline_access api refresh_token
+  ? iscloudstreamsconnectorservice.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:addData.connectionAlias
+  : project.mjan22nov.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:salesforceaccount
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.minimumPoolSize
+  : "1"
+  ? cloudstreamsconnection.project..mjan22nov..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:salesforceaccount.cn.reuseAddr
+  : "false"

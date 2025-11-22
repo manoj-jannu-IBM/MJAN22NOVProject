@@ -45,9 +45,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">manoj.jannu@ibm.com</value>
-    <value name="createdDate">1763805100028</value>
-    <value name="lastModifiedDate">1763805100028</value>
+    <value name="lastModifiedBy">manoj.jannu@ibm.com</value>
+    <value name="lastModifiedDate">1763805302520</value>
     <value name="displayName">dbTest</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -104,6 +103,11 @@
         </array>
         <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
         </array>
+        <value name="nodePathForDebug">0</value>
+      </record>
+      <record name="/1" javaclass="com.wm.util.Values">
+        <value name="itemType">ALL</value>
+        <value name="name">NEW</value>
       </record>
     </record>
   </record>
